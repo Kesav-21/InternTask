@@ -1,13 +1,14 @@
 import './App.css';
-import FlightSearch from './components/FlightSearch';
 import {flights} from './data/data'
-import { useEffect, useState } from 'react';
+import {useState } from 'react';
+import SearchFlight from './components/SearchFlight'
 
 function App() {
   const [flight,setFlight]=useState(flights)
   return (
     <div>
-      <FlightSearch flights={flights}/>
+        <h1>Flight Search Engine</h1>
+        <SearchFlight flights={flights}/>
     </div>
   );
 }

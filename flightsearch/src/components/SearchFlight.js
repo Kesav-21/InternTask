@@ -12,7 +12,7 @@ const SearchFlight = ({flights}) => {
             <h4>One way</h4>
             <h4>Two way</h4>
         </div>
-        {oneWayTrip?<OneWay/>:<RoundTrip/>}
+        {oneWayTrip?<OneWay flights={flights}/>:<RoundTrip/>}
     </div>
   )
 }

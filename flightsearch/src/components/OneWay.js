@@ -1,14 +1,21 @@
 import React, { useState } from 'react'
+import SearchResult from './SearchResult'
 
-const OneWay = () => {
+const OneWay = ({flights}) => {
     const passengers=[1,2,3,4,5,6,7,8,9]
-    const [formData,SetFormData]=useState({})
     const [from,setFrom]=useState("")
     const [to,setTo]=useState("")
     const [deptDate,setDeptDate]=useState("")
+    const [selected,setSelected]=useState(passengers[0])
+
+    const [filtered,setFiltered]=useState([])
+
 
     const handleSubmit=(e)=>{
         e.preventDefault()
+        const res=flights.filter(flight=>flight.from==from && flight.to==to)
+        console.log(res)
+        setFiltered(res)
     }
 
     const handleFromInput=(e)=>{
@@ -17,8 +24,11 @@ const OneWay = () => {
     const handleToInput=(e)=>{
         setTo(e.target.value)
     }
-    const handleDeptDateInput=(e)=>{
+    const handleDateInput=(e)=>{
         setDeptDate(e.target.value)
+    }
+    const handlePassengerInput=(e)=>{
+        setSelected(e.target.value)
     }
 
   return (
@@ -34,18 +44,19 @@ const OneWay = () => {
             </div>
             <div>
                 <label>Date:</label>
-                <input type='date' value={deptDate} onChange={handleDeptDateInput}/>
+                <input type='date' value={deptDate} onChange={handleDateInput}/>
             </div>
             <div>
                 <label>Passengers:</label>
-                <select id="passengers">
-                    {/* {passengers.map(num=>{
-                        <option value={`${num}`}>{value}</option>
-                    })} */}
+                <select value={selected} onChange={handlePassengerInput}>
+                    {passengers.map(num=>
+                        <option key={num} value={num}>{num}</option>
+                    )}
                 </select>
             </div>
             <button type='submit'>Search</button>
         </form>
+        <SearchResult filtered={filtered}/>
     </div>
   )
 }
