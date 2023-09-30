@@ -1,9 +1,11 @@
 import React from 'react'
+import SearchFlight from './SearchFlight'
 
 const FlightSearch = () => {
   return (
     <div>
-        <h1>FlightSearch</h1>
+        <h1>Flight Search Engine</h1>
+        <SearchFlight/>
     </div>
   )
 }
