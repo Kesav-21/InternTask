@@ -1,6 +1,11 @@
 header{
     text-align: center;
 }
+.flex-evenly{
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .flight-search{
     display: flex;
     flex-direction: row;
@@ -21,6 +26,7 @@ header{
 }
 
 .flight-card-container{
+    display: flex;
     border:2px solid blue;
 }
 .flight-info{
@@ -35,5 +41,15 @@ header{
 }
 .trip-info{
     display: flex;
+    justify-content: space-around;
 
+}
+.info-section{
+    width: 80%;
+}
+
+.book-section{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
 }

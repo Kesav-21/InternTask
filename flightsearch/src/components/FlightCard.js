@@ -3,6 +3,7 @@ import React from 'react'
 const FlightCard = ({flight,oneway}) => {
   return (
     <div className='flight-card-container'>
+        <div className='info-section'>
         <div className='flight-info'>
         <p>{flight.company}</p>
         <p>Duration:{flight.duration}</p>
@@ -10,22 +11,21 @@ const FlightCard = ({flight,oneway}) => {
         
         </div>
         <div className={`${oneway?'onewaytrip':'trip-info'}`}>
-        <div>
+        <div className={`${oneway?'flex-evenly':null}`}>
         <p>Flight ID:{flight.f_id}</p>
         <p>{flight.departureCityCode+" > "+flight.arrivalCityCode}</p>
-        <p>{flight.departureTime}</p>
-        <p>{flight.arrivalTime}</p>
+        <p>{flight.departureTime+" ----> "+flight.arrivalTime}</p>
         </div>
         {oneway?null:
         <div>
             <p>Flight ID:{flight.f_id}</p>
             <p>{flight.return_trip.departureCityCode+" > "+flight.return_trip.arrivalCityCode}</p>
-            <p>{flight.return_trip.retDepartureTime}</p>
-            <p>{flight.return_trip.retArrivalTime}</p>
+            <p>{flight.return_trip.retDepartureTime+" ----> "+flight.return_trip.retArrivalTime}</p>
         </div>
         }
     </div>
-        <div>
+    </div>
+        <div className='book-section'>
             <img src="#"/>
             <button>Book this flight</button>
         </div>
