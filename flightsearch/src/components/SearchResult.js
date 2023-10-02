@@ -1,18 +1,29 @@
 import React from 'react'
 
-const SearchResult = ({filtered}) => {
+const SearchResult = ({oneway,filtered}) => {
+    console.log(oneway,filtered)
     return (
     <div>
         <h2>Results for Flights</h2>
         <div>
-            {
+            {oneway?
                 filtered.map(flight=>{return(
-                    <div>
-                        <p>{flight.flight_service_provider}</p>
-                        <p>{flight.from}:{flight.departure_time}</p>
-                        <p>{flight.to}:{flight.arrival_time}</p>
+                    <div className='result-list'>
+                        <p>{flight.company}</p>
+                        <p>{flight.departureCity}:{flight.departureTime}</p>
+                        <p>{flight.arrivalCity}:{flight.arrivalTime}</p>
+                        <p>Duration:{flight.duration}</p>
                         <p>{flight.price}</p>
                     </div>)
+                }):filtered.map(flight=>{return(
+                    <div>
+                            <div>
+                                <p>{flight.company}</p>
+                                <p>{flight.duration}</p>
+                                <p>{flight.price}</p>
+                            </div>
+                    </div>
+                )
                 })
             }
         </div>
