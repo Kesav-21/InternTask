@@ -1,8 +1,32 @@
 header{
     text-align: center;
 }
+.flight-search{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.search-form{
+    width: 20%;
+}
+.result-container{
+    width: 70%;
+    border:5px solid red;
+}
+
 .trip-search-container{
     display: grid;
     grid-template-columns: 30% 70%;
     border:2px solid red;
+}
+
+.flight-card-container{
+    border:2px solid blue;
+}
+.flight-info{
+    display: flex;
+    justify-content: space-around;
+    font-weight: bold;
+    font-size: 20px;
+
 }

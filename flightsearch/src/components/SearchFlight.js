@@ -42,10 +42,11 @@ const SearchFlight = () => {
   }
 
   return (
-    <div className='flightsearch'>
+    <div className='flight-search'>
+        <div className='search-form'>
         <div className='tripselection'>
-            <h4 onClick={handleTripChange}>One way</h4>
-            <h4 onClick={handleTripChange}>Round Trip</h4>
+            <button onClick={handleTripChange} disabled={isOneWay}>One way</button>
+            <button onClick={handleTripChange} disabled={!isOneWay}>Round Trip</button>
         </div>
         <div className='trip-search-container'>
         <form onSubmit={handleSubmit}>
@@ -78,8 +79,9 @@ const SearchFlight = () => {
             </div>
             <button type='submit'>Search</button>
         </form>
-        <SearchResult oneway={isOneWay} filtered={availableFlights}/>
     </div>
+    </div>
+    <SearchResult oneway={isOneWay} filtered={availableFlights} from={from[0].toUpperCase()+from.slice(1)} to={to[0].toUpperCase()+to.slice(1)}/>
     </div>
   )
 }
