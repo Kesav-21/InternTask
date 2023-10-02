@@ -81,7 +81,11 @@ const SearchFlight = () => {
         </form>
     </div>
     </div>
-    <SearchResult oneway={isOneWay} filtered={availableFlights} from={from[0].toUpperCase()+from.slice(1)} to={to[0].toUpperCase()+to.slice(1)}/>
+    <SearchResult oneway={isOneWay} filtered={availableFlights} 
+    from={from!=""? from[0].toUpperCase()+from.slice(1):""} 
+    to={to!=""? to[0].toUpperCase()+to.slice(1):""}
+    deptDate={deptDate}
+    retDate={retDate}/>
     </div>
   )
 }

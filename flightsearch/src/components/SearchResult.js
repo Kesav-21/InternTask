@@ -1,24 +1,21 @@
 import React from 'react'
 import FlightCard from './FlightCard'
 
-const SearchResult = ({oneway,filtered,from,to}) => {
+const SearchResult = ({oneway,filtered,from,to,deptDate,retDate}) => {
     return (
     <div className='result-container'>
-        <h2>{from +" > "+to}{oneway ? null : `${" > "+from}`}</h2>
+        <div>
+            <h2>{(from=="" && to=="")?"From > To":`${oneway?`${from +" > "+to}`:`${from+" > "+to+" > "+from}`}`}</h2>
+            <div>
+                <p>Departure Date : {deptDate}</p>
+                {!oneway && <p>Return Date : {retDate}</p>}
+            </div>
+        </div>
         <div>
             {oneway?
-                filtered.map(flight=><FlightCard flight={flight}/>):
-                filtered.map(flight=>{return(
-                    <div>
-                            <div>
-                                <p>{flight.company}</p>
-                                <p>{flight.duration}</p>
-                                <p>{flight.price}</p>
-                            </div>
-                    </div>
-                )
-                })
-            }
+                filtered.map(flight=><FlightCard flight={flight} oneway={oneway}/>):
+                filtered.map(flight=><FlightCard flight={flight} oneway={oneway}/>)
+                }
         </div>
     </div>
   )
