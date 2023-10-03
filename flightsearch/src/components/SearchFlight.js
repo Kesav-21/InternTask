@@ -5,8 +5,8 @@ import SearchResult from './SearchResult'
 const SearchFlight = () => {
   const [isOneWay,setIsOneWay]=useState(true)
   const passengers=[1,2,3,4,5,6,7,8,9]
-  const [from,setFrom]=useState("")
-  const [to,setTo]=useState("")
+  const [from,setFrom]=useState("chennai")
+  const [to,setTo]=useState("delhi")
   const [deptDate,setDeptDate]=useState("")
   const [retDate,setRetDate]=useState("")
   const [selected,setSelected]=useState(passengers[0])
@@ -44,12 +44,12 @@ const SearchFlight = () => {
   return (
     <div className='flight-search'>
         <div className='search-form'>
-        <div className='tripselection'>
+        <div className='trip-selection'>
             <button onClick={handleTripChange} disabled={isOneWay}>One way</button>
             <button onClick={handleTripChange} disabled={!isOneWay}>Round Trip</button>
         </div>
         <div className='trip-search-container'>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className='trip-search-form'>
             <div>
                 <label>From:</label>
                 <input type='text' value={from} onChange={handleFromInput} placeholder='Enter Origin City'/>
@@ -81,7 +81,7 @@ const SearchFlight = () => {
         </form>
     </div>
     </div>
-    <SearchResult oneway={isOneWay} filtered={availableFlights} 
+    <SearchResult oneway={isOneWay} filtered={availableFlights.length==0?flights:availableFlights} 
     from={from!=""? from[0].toUpperCase()+from.slice(1):""} 
     to={to!=""? to[0].toUpperCase()+to.slice(1):""}
     deptDate={deptDate}

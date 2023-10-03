@@ -1,5 +1,10 @@
 header{
     text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    width: 30%;
+    align-items: center;
+    margin: 0 auto;
 }
 .flex-evenly{
     display: flex;
@@ -20,9 +25,55 @@ header{
 }
 
 .trip-search-container{
-    display: grid;
-    grid-template-columns: 30% 70%;
-    border:2px solid red;
+    display: flex;
+    flex-direction: column;
+    border:5px solid red;
+    border-radius: 10px;
+    background-color: rgb(161, 161, 161);
+}
+.trip-search-form{
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+.trip-search-form>div{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+.trip-search-form>button{
+    padding: 10px;
+    border-radius: 20px;
+    border:none;
+    width:90%;
+    margin:5px auto;
+    font-size: 20px;
+    font-weight: bold;
+}
+.trip-search-form>button:hover{
+    cursor: pointer;
+    background-color: green;
+    color:white;
+}
+.trip-selection>button{
+    background-color: white;
+    color:green;
+}
+input{
+    padding:10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+}
+select{
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: bold;
+}
+label{
+    font-size: 20px;
 }
 
 .flight-card-container{
@@ -51,5 +102,19 @@ header{
 .book-section{
     display: flex;
     flex-direction: column;
-    width: 20%;
+    width: 200px;
+}
+
+.book-section>button{
+    border:none;
+    padding:10px;
+    margin: 5px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+.book-section>button:hover{
+    color:red;
+    cursor: pointer;
+    background-color: burlywood;
+    border:2px solid black;
 }
