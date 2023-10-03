@@ -6,7 +6,7 @@ export const flights = [
     departureTime: "7:00",
     duration: "3h 15m",
     arrivalTime: "11:00",
-    price: "4,500",
+    price: 4500,
     details: [],
     type: "economy",
     f_id: "AirAsia_07:00",
@@ -21,7 +21,7 @@ export const flights = [
       arrivalCityCode: "CHN",
       retDepartureTime: "09:00",
       retArrivalTime: "11:00",
-      price: "7,000"        
+      price: 7000       
     } 
   },
   {
@@ -31,7 +31,7 @@ export const flights = [
     departureTime: "7:00",
     duration: "3h 15m",
     arrivalTime: "11:00",
-    price: "2,800",
+    price: 2800,
     details: [],
     type: "economy",
     f_id: "IndiGoAirlines_07:00",
@@ -46,7 +46,7 @@ export const flights = [
       arrivalCityCode: "CHN",
       retDepartureTime: "09:00",
       retArrivalTime: "11:00",
-      price: "7,000"        
+      price: 7000        
     } 
   },
   {
@@ -56,7 +56,7 @@ export const flights = [
     departureTime: "7:00",
     duration: "3h 15m",
     arrivalTime: "11:00",
-    price: "3,000",
+    price: 3000,
     details: [],
     type: "economy",
     f_id: "AirIndia_07:00",
@@ -71,7 +71,7 @@ export const flights = [
       arrivalCityCode: "CHN",
       retDepartureTime: "09:00",
       retArrivalTime: "11:00",
-      price: "7,000"        
+      price: 7000        
     } 
   },
   {
@@ -81,11 +81,12 @@ export const flights = [
     departureTime: "7:00",
     duration: "3h 15m",
     arrivalTime: "11:00",
-    price: "3,562",
+    price: 3562,
     details: [],
     type: "economy",
     f_id: "AirAsia_07:00",
-
+    arrivalCityCode: "DEL",
+    departureCityCode: "CHN",
     return_trip: {
       company: "AirAsia",
       f_id: "IND-203",
@@ -95,7 +96,7 @@ export const flights = [
       arrivalCityCode: "CHN",
       retDepartureTime: "09:00",
       retArrivalTime: "11:00",
-      price: "7,000"        
+      price: 7000        
     } 
   },
   {
@@ -105,7 +106,7 @@ export const flights = [
     departureTime: "7:00",
     duration: "4h 0m",
     arrivalTime: "11:00",
-    price: "8,564",
+    price: 8564,
     details: [],
     type: "economy",
     f_id: "AirAsia_07:00",
@@ -120,7 +121,7 @@ export const flights = [
       arrivalCityCode: "CHN",
       retDepartureTime: "09:00",
       retArrivalTime: "11:00",
-      price: "7,000"        
+      price: 7000        
     } 
   },
   {
@@ -131,7 +132,7 @@ export const flights = [
     duration: "3h 15m",
     arrivalTime: "00:10",
     arrivalCity: "Chennai",
-    price: "8,680",
+    price: 8680,
     type: "economy",
     f_id: "SpiceJet_20:55",
     arrivalCityCode: "CHN",
@@ -145,7 +146,7 @@ export const flights = [
       arrivalCityCode: "HYD",
       retDepartureTime: "09:00",
       retArrivalTime: "11:00",
-      price: "7,000"        
+      price: 7000        
     } 
   },
   {
@@ -156,7 +157,7 @@ export const flights = [
     duration: "5h 10m",
     arrivalTime: "01:00",
     arrivalCity: "Bangalore",
-    price: "8,758",
+    price: 8758,
     type: "economy",
     f_id: "IndiGo_19:50",
     arrivalCityCode: "BLR",
@@ -170,7 +171,7 @@ export const flights = [
       arrivalCityCode: "DEL",
       retDepartureTime: "09:00",
       retArrivalTime: "11:00",
-      price: "7,000"        
+      price: 7000        
     } 
   },
   {
@@ -181,7 +182,7 @@ export const flights = [
     duration: "5h 30m",
     arrivalTime: "12:25",
     arrivalCity: "Bangalore",
-    price: "8,985",
+    price: 8985,
     type: "economy",
     f_id: "AirAsia India_06:55",
     arrivalCityCode: "BLR",
@@ -195,7 +196,7 @@ export const flights = [
       arrivalCityCode: "DEL",
       retDepartureTime: "09:00",
       retArrivalTime: "11:00",
-      price: "7,000"        
+      price: 7000        
     } 
   },
   {
@@ -206,9 +207,11 @@ export const flights = [
     duration: "10h 55m",
     arrivalTime: "06:55",
     arrivalCity: "Delhi",
-    price: "9,183",
+    price: 9183,
     type: "economy",
     f_id: "AirAsia India_20:00",
+    arrivalCityCode: "DEL",
+    departureCityCode: "BLR",
     return_trip: {
       company: "Indigo",
       f_id: "IND-203",
@@ -218,7 +221,7 @@ export const flights = [
       arrivalCityCode: "CHN",
       retDepartureTime: "09:00",
       retArrivalTime: "11:00",
-      price: "7,000"        
+      price: 7000        
     } 
   },
   {
@@ -229,9 +232,11 @@ export const flights = [
     duration: "6h 40m",
     arrivalTime: "13:10",
     arrivalCity: "Delhi",
-    price: "9,277",
+    price: 9278,
     type: "economy",
     f_id: "IndiGo_06:30",
+    arrivalCityCode: "DEL",
+    departureCityCode: "BLR",
     return_trip: {
       company: "Indigo",
       f_id: "IND-203",
@@ -241,7 +246,7 @@ export const flights = [
       arrivalCityCode: "CHN",
       retDepartureTime: "09:00",
       retArrivalTime: "11:00",
-      price: "7,000"        
+      price: 7000       
     } 
   },
   {
@@ -252,9 +257,11 @@ export const flights = [
     duration: "10h 55m",
     arrivalTime: "06:45",
     arrivalCity: "Chennai",
-    price: "9,370",
+    price: 9370,
     type: "economy",
     f_id: "IndiGo_19:50",
+    arrivalCityCode: "CHN",
+    departureCityCode: "BLR",
     return_trip: {
       company: "Indigo",
       f_id: "IND-203",
@@ -264,7 +271,7 @@ export const flights = [
       arrivalCityCode: "CHN",
       retDepartureTime: "09:00",
       retArrivalTime: "11:00",
-      price: "7,000"        
+      price: 7000        
     } 
   },
   {
@@ -275,9 +282,11 @@ export const flights = [
     duration: "8h 00m",
     arrivalTime: "18:10",
     arrivalCity: "Bangalore",
-    price: "9,628",
+    price: 9628,
     type: "economy",
     f_id: "IndiGo_10:10",
+    arrivalCityCode: "BLR",
+    departureCityCode: "CHN",
     return_trip: {
       company: "Indigo",
       f_id: "IND-203",
@@ -287,7 +296,7 @@ export const flights = [
       arrivalCityCode: "CHN",
       retDepartureTime: "09:00",
       retArrivalTime: "11:00",
-      price: "7,000"        
+      price: 7000        
     } 
   },
   {
@@ -298,9 +307,11 @@ export const flights = [
     duration: "4h 50m",
     arrivalTime: "06:45",
     arrivalCity: "Chennai",
-    price: "9,654",
+    price: 9654,
     type: "economy",
     f_id: "IndiGo_01:55",
+    arrivalCityCode: "CHN",
+    departureCityCode: "DEL",
     return_trip: {
       company: "Indigo",
       f_id: "IND-203",
@@ -310,7 +321,7 @@ export const flights = [
       arrivalCityCode: "CHN",
       retDepartureTime: "09:00",
       retArrivalTime: "11:00",
-      price: "7,000"        
+      price: 7000        
     } 
   },
   {
@@ -321,9 +332,11 @@ export const flights = [
     duration: "5h 30m",
     arrivalTime: "11:40",
     arrivalCity: "Bangalore",
-    price: "9,698",
+    price: 9698,
     type: "economy",
     f_id: "IndiGo_06:10",
+    arrivalCityCode: "BLR",
+    departureCityCode: "DEL",
     return_trip: {
       company: "Indigo",
       f_id: "IND-203",
@@ -333,7 +346,7 @@ export const flights = [
       arrivalCityCode: "CHN",
       retDepartureTime: "09:00",
       retArrivalTime: "11:00",
-      price: "7,000"        
+      price: 7000        
     } 
   },
   {
@@ -344,9 +357,11 @@ export const flights = [
     duration: "7h 50m",
     arrivalTime: "09:45",
     arrivalCity: "Chennai",
-    price: "9,734",
+    price: 9734,
     type: "economy",
     f_id: "IndiGo_01:55",
+    arrivalCityCode: "CHN",
+    departureCityCode: "BLR",
     return_trip: {
       company: "Indigo",
       f_id: "IND-203",
@@ -356,7 +371,7 @@ export const flights = [
       arrivalCityCode: "CHN",
       retDepartureTime: "09:00",
       retArrivalTime: "11:00",
-      price: "7,000"        
+      price: 7000        
     } 
   },
   {
@@ -367,9 +382,11 @@ export const flights = [
     duration: "6h 30m",
     arrivalTime: "08:25",
     arrivalCity: "Delhi",
-    price: "9,787",
+    price: 9787,
     type: "economy",
     f_id: "IndiGo_01:55",
+    arrivalCityCode: "DEL",
+    departureCityCode: "CHN",
     return_trip: {
       company: "Indigo",
       f_id: "IND-203",
@@ -379,7 +396,7 @@ export const flights = [
       arrivalCityCode: "CHN",
       retDepartureTime: "09:00",
       retArrivalTime: "11:00",
-      price: "7,000"        
+      price: 7000       
     } 
   },
   {
@@ -390,9 +407,11 @@ export const flights = [
     duration: "2h 40m",
     arrivalTime: "01:35",
     arrivalCity: "Bangalore",
-    price: "9,898",
+    price: 9898,
     type: "economy",
     f_id: "AirAsia India_22:55",
+    arrivalCityCode: "BLR",
+    departureCityCode: "CHN",
     return_trip: {
       company: "Indigo",
       f_id: "IND-203",
@@ -402,7 +421,7 @@ export const flights = [
       arrivalCityCode: "CHN",
       retDepartureTime: "09:00",
       retArrivalTime: "11:00",
-      price: "7,000"        
+      price: 7000        
     } 
   },
   {
@@ -413,9 +432,11 @@ export const flights = [
     duration: "8h 55m",
     arrivalTime: "19:05",
     arrivalCity: "Bangalore",
-    price: "9,923",
+    price: 9923,
     type: "economy",
     f_id: "IndiGo_10:10",
+    arrivalCityCode: "BLR",
+    departureCityCode: "DEL",
     return_trip: {
       company: "Indigo",
       f_id: "IND-203",
@@ -425,7 +446,7 @@ export const flights = [
       arrivalCityCode: "CHN",
       retDepartureTime: "09:00",
       retArrivalTime: "11:00",
-      price: "7,000"        
+      price: 7000     
     } 
   },
   {
@@ -436,9 +457,11 @@ export const flights = [
     duration: "7h 45m",
     arrivalTime: "12:45",
     arrivalCity: "Bangalore",
-    price: "10,187",
+    price: 10187,
     type: "economy",
     f_id: "AirAsia India_05:00",
+    arrivalCityCode: "BLR",
+    departureCityCode: "DEL",
     return_trip: {
       company: "Indigo",
       f_id: "IND-203",
@@ -448,7 +471,7 @@ export const flights = [
       arrivalCityCode: "CHN",
       retDepartureTime: "09:00",
       retArrivalTime: "11:00",
-      price: "7,000"        
+      price: 7000        
     } 
   },
   {
@@ -459,9 +482,11 @@ export const flights = [
     duration: "7h 30m",
     arrivalTime: "22:15",
     arrivalCity: "Delhi",
-    price: "10,227",
+    price: 10227,
     type: "economy",
     f_id: "AirAsia India_14:45",
+    arrivalCityCode: "DEL",
+    departureCityCode: "BLR",
     return_trip: {
       company: "Indigo",
       f_id: "IND-203",
@@ -471,7 +496,7 @@ export const flights = [
       arrivalCityCode: "CHN",
       retDepartureTime: "09:00",
       retArrivalTime: "11:00",
-      price: "7,000"        
+      price: 7000        
     } 
   },
 ];

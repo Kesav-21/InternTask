@@ -16,20 +16,20 @@ const FlightCard = ({flight,oneway}) => {
         <div className={`${oneway?'onewaytrip':'trip-info'}`}>
         <div className={`${oneway?'flex-evenly':null}`}>
         <p>Flight ID:{flight.f_id}</p>
-        <p>{flight.departureCityCode+" > "+flight.arrivalCityCode}</p>
+        <p>{flight.departureCityCode+" >> "+flight.arrivalCityCode}</p>
         <p>{flight.departureTime+" ----> "+flight.arrivalTime}</p>
         </div>
         {oneway?null:
         <div>
             <p>Flight ID:{flight.f_id}</p>
-            <p>{flight.return_trip.departureCityCode+" > "+flight.return_trip.arrivalCityCode}</p>
+            <p>{flight.return_trip.departureCityCode+" >> "+flight.return_trip.arrivalCityCode}</p>
             <p>{flight.return_trip.retDepartureTime+" ----> "+flight.return_trip.retArrivalTime}</p>
         </div>
         }
     </div>
     </div>
         <div className='book-section'>
-            <img src="https://images.unsplash.com/photo-1583202075376-837d5ff1bf0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" height={150} width={200}/>
+            <img src="https://images.unsplash.com/photo-1583202075376-837d5ff1bf0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" height={120} width={180}/>
             <button onClick={handleBook}>Book this flight</button>
         </div>
     </div>

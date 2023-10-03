@@ -21,7 +21,16 @@ header{
 }
 .result-container{
     width: 70%;
-    border:5px solid red;
+    /* border:5px solid red; */
+}
+.result-head{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 150px;
+    border-radius: 25px;
+    background-color: rgb(200, 235, 235);
+    margin: 20px auto;
 }
 
 .trip-search-container{
@@ -56,9 +65,31 @@ header{
     color:white;
 }
 .trip-selection>button{
-    background-color: white;
-    color:green;
+    background-color: grey;
+    color:white;
+    padding: 10px;
+    border-radius: 10px;
+    width: 50%;
+    font-size: 20px;
+    font-weight: bold;
 }
+.trip-selection>button:disabled{
+    background-color: green;
+}
+
+.refine-search{
+    padding: 35px;
+}
+.input-range__label{
+    color: red !important;
+    font-size: 15px;
+}
+
+.header-date-info{
+    font-weight: 700;
+    font-size: 18px;
+}
+
 input{
     padding:10px;
     border: none;
@@ -78,14 +109,17 @@ label{
 
 .flight-card-container{
     display: flex;
-    border:2px solid blue;
+    border-radius: 25px;
+    background-color: rgb(187, 187, 187);
+    padding: 20px;
+    margin:10px auto;
 }
 .flight-info{
     display: flex;
     justify-content: space-around;
     font-weight: bold;
     font-size: 20px;
-
+    align-items: center;
 }
 .oneway-trip{
     display: flex;
@@ -93,6 +127,7 @@ label{
 .trip-info{
     display: flex;
     justify-content: space-around;
+    align-items: center;
 
 }
 .info-section{
@@ -102,15 +137,20 @@ label{
 .book-section{
     display: flex;
     flex-direction: column;
-    width: 200px;
+    width: 180px;
+    margin: 0 auto;
+}
+
+.book-section>img{
+    border-radius: 10px;
 }
 
 .book-section>button{
     border:none;
     padding:10px;
-    margin: 5px;
     border-radius: 10px;
     font-weight: 600;
+    margin: 5px 0;
 }
 .book-section>button:hover{
     color:red;
@@ -118,3 +158,4 @@ label{
     background-color: burlywood;
     border:2px solid black;
 }
+

@@ -1,24 +1,30 @@
 import React,{useState} from 'react'
 import { flights } from '../data/flights'
 import SearchResult from './SearchResult'
+import InputRange from 'react-input-range'
+import 'react-input-range/lib/css/index.css'
 
 const SearchFlight = () => {
   const [isOneWay,setIsOneWay]=useState(true)
   const passengers=[1,2,3,4,5,6,7,8,9]
-  const [from,setFrom]=useState("chennai")
-  const [to,setTo]=useState("delhi")
-  const [deptDate,setDeptDate]=useState("")
-  const [retDate,setRetDate]=useState("")
+  const [from,setFrom]=useState("")
+  const [to,setTo]=useState("")
+  const [today,setToday]=useState(new Date().toISOString().split('T')[0])
+  const [deptDate,setDeptDate]=useState(`${today}`)
+  const [retDate,setRetDate]=useState(`${today}`)
   const [selected,setSelected]=useState(passengers[0])
   const [availableFlights,setAvailableFlights]=useState([])
-  const [today,setToday]=useState(new Date().toISOString().split('T')[0])
+  const [refine,setRefine]=useState([])
+  const [price,setPrice]=useState({
+    min:1000,
+    max:10000
+  })
 
     const handleSubmit=(e)=>{
         e.preventDefault()
-        console.log(flights.filter(flight=>flight.departureCity.toLowerCase()==from.toLowerCase() && flight.arrivalCity.toLowerCase()==to.toLowerCase()
-        || flight.departureCityCode==from.toUpperCase() && flight.arrivalCityCode==to.toUpperCase()))
-        setAvailableFlights(flights.filter(flight=>flight.departureCity.toLowerCase()==from.toLowerCase() && flight.arrivalCity.toLowerCase()==to.toLowerCase()
-        || flight.departureCityCode==from.toUpperCase() && flight.arrivalCityCode==to.toUpperCase()))        
+        setAvailableFlights(flights.filter(flight=>(flight.departureCity.toLowerCase()==from.toLowerCase() && flight.arrivalCity.toLowerCase()==to.toLowerCase()
+        || flight.departureCityCode==from.toUpperCase() && flight.arrivalCityCode==to.toUpperCase())))
+        setRefine(availableFlights)
     }
 
     const handleFromInput=(e)=>{
@@ -39,6 +45,13 @@ const SearchFlight = () => {
 
   const handleTripChange=()=>{
     setIsOneWay(!isOneWay)
+  }
+
+  const handleSearchRefine=()=>{
+    if(isOneWay)
+    setRefine(availableFlights.filter(flight=>flight.price>price.min && flight.price<price.max))
+    else
+    setRefine(availableFlights.filter(flight=>flight.return_trip.price>price.min && flight.return_trip.price<price.max))
   }
 
   return (
@@ -79,13 +92,24 @@ const SearchFlight = () => {
             </div>
             <button type='submit'>Search</button>
         </form>
+        <div className='refine-search'>
+            <h2>Refine Search</h2>
+            <InputRange
+            maxValue={10000}
+            minValue={0}
+            value={price}
+            formatLabel={val=>`Rs.${val}`}
+            onChange={val=>setPrice(val)}
+            onChangeComplete={handleSearchRefine}
+            />
+        </div>
     </div>
     </div>
-    <SearchResult oneway={isOneWay} filtered={availableFlights.length==0?flights:availableFlights} 
+    <SearchResult oneway={isOneWay} filtered={availableFlights.length==0?flights:refine} 
     from={from!=""? from[0].toUpperCase()+from.slice(1):""} 
     to={to!=""? to[0].toUpperCase()+to.slice(1):""}
     deptDate={deptDate}
-    retDate={retDate}/>
+    retDate={retDate} price={price}/>
     </div>
   )
 }
