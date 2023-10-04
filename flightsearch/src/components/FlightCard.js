@@ -14,13 +14,13 @@ const FlightCard = ({flight,oneway}) => {
         
         </div>
         <div className={`${oneway?'onewaytrip':'trip-info'}`}>
-        <div className={`${oneway?'flex-evenly':null}`}>
+        <div className={`${oneway?'flex-evenly':null} flight-card`}>
         <p>Flight ID:{flight.f_id}</p>
         <p>{flight.departureCityCode+" >> "+flight.arrivalCityCode}</p>
         <p>{flight.departureTime+" ----> "+flight.arrivalTime}</p>
         </div>
         {oneway?null:
-        <div>
+        <div className='flight-card'>
             <p>Flight ID:{flight.f_id}</p>
             <p>{flight.return_trip.departureCityCode+" >> "+flight.return_trip.arrivalCityCode}</p>
             <p>{flight.return_trip.retDepartureTime+" ----> "+flight.return_trip.retArrivalTime}</p>

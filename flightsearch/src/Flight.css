@@ -1,3 +1,4 @@
+/* Basic styling */
 header{
     text-align: center;
     display: flex;
@@ -6,10 +7,35 @@ header{
     align-items: center;
     margin: 0 auto;
 }
+.input-range__label{
+    color: red !important;
+    font-size: 15px;
+}
+input{
+    padding:10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+}
+select{
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: bold;
+}
+label{
+    font-size: 20px;
+}
+
 .flex-evenly{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
+
+/* End of Basic styling */
+
+/* Start of Searh Flight Form */
 
 .flight-search{
     display: flex;
@@ -19,31 +45,24 @@ header{
 .search-form{
     width: 20%;
 }
-.result-container{
-    width: 70%;
-    /* border:5px solid red; */
+.trip-selection>button{
+    background-color: grey;
+    color:white;
+    padding: 10px;
+    border-radius: 10px;
+    width: 50%;
+    font-size: 20px;
+    font-weight: bold;
 }
-.result-head{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 150px;
-    border-radius: 25px;
-    background-color: rgb(200, 235, 235);
-    margin: 20px auto;
+.trip-selection>button:disabled{
+    background-color: green;
 }
-
 .trip-search-container{
     display: flex;
     flex-direction: column;
     border:5px solid red;
     border-radius: 10px;
     background-color: rgb(161, 161, 161);
-}
-.trip-search-form{
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
 }
 .trip-search-form>div{
     display: flex;
@@ -64,48 +83,36 @@ header{
     background-color: green;
     color:white;
 }
-.trip-selection>button{
-    background-color: grey;
-    color:white;
-    padding: 10px;
-    border-radius: 10px;
-    width: 50%;
-    font-size: 20px;
-    font-weight: bold;
+.trip-search-form{
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
 }
-.trip-selection>button:disabled{
-    background-color: green;
-}
-
 .refine-search{
-    padding: 35px;
-}
-.input-range__label{
-    color: red !important;
-    font-size: 15px;
+    padding: 25px 35px;
 }
 
+/* End of Search Flight styling */
+/* Start of Search Result Styling */
+
+.result-container{
+    width: 70%;
+}
+.result-head{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 150px;
+    border-radius: 25px;
+    background-color: rgb(200, 235, 235);
+    margin: 20px auto;
+}
 .header-date-info{
     font-weight: 700;
     font-size: 18px;
 }
-
-input{
-    padding:10px;
-    border: none;
-    border-radius: 10px;
-    font-size: 15px;
-    font-weight: bold;
-}
-select{
-    border-radius: 10px;
-    padding: 10px;
-    font-size: 15px;
-    font-weight: bold;
-}
-label{
-    font-size: 20px;
-}
+/* End of Search Result Styling */
+/* Start of Flight Card Styling */
 
 .flight-card-container{
     display: flex;
@@ -113,6 +120,9 @@ label{
     background-color: rgb(187, 187, 187);
     padding: 20px;
     margin:10px auto;
+}
+.info-section{
+    width: 80%;
 }
 .flight-info{
     display: flex;
@@ -128,12 +138,11 @@ label{
     display: flex;
     justify-content: space-around;
     align-items: center;
-
 }
-.info-section{
-    width: 80%;
+.flight-card{
+    font-size: 17px;
+    font-weight: 500;
 }
-
 .book-section{
     display: flex;
     flex-direction: column;
@@ -159,3 +168,4 @@ label{
     border:2px solid black;
 }
 
+/* End of Flight Card of Styling */
