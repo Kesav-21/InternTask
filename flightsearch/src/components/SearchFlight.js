@@ -1,24 +1,27 @@
-import React,{useState} from 'react'
+import React,{useEffect, useState} from 'react'
 import { flights } from '../data/flights'
 import SearchResult from './SearchResult'
 import InputRange from 'react-input-range'
 import 'react-input-range/lib/css/index.css'
 
 const SearchFlight = () => {
-  const [isOneWay,setIsOneWay]=useState(true)
-  const passengers=[1,2,3,4,5,6,7,8,9]
-  const [from,setFrom]=useState("")
-  const [to,setTo]=useState("")
-  const [today,setToday]=useState(new Date().toISOString().split('T')[0])
-  const [deptDate,setDeptDate]=useState(`${today}`)
-  const [retDate,setRetDate]=useState(`${today}`)
-  const [selected,setSelected]=useState(passengers[0])
-  const [availableFlights,setAvailableFlights]=useState([])
-  const [refine,setRefine]=useState([])
-  const [price,setPrice]=useState({
-    min:1000,
-    max:10000
-  })
+    const [isOneWay,setIsOneWay]=useState(true)
+    const passengers=[1,2,3,4,5,6,7,8,9]
+    const [from,setFrom]=useState("")
+    const [to,setTo]=useState("")
+    const [today,setToday]=useState(new Date().toISOString().split('T')[0])
+    const [deptDate,setDeptDate]=useState(`${today}`)
+    const [retDate,setRetDate]=useState(`${today}`)
+    const [selected,setSelected]=useState(passengers[0])
+    const [availableFlights,setAvailableFlights]=useState([])
+    const [refine,setRefine]=useState([])
+    const [price,setPrice]=useState({
+        min:1000,
+        max:10000
+    })
+    useEffect(()=>{
+        setRefine(availableFlights)
+    },[availableFlights])
 
     const handleSubmit=(e)=>{
         e.preventDefault()
